@@ -86,9 +86,7 @@ GET /cloud/api4/{user_id}
 GET /cloud/api5/{user_id}
 GET /cloud/api6/{user_id}
 Authentication and Authorization Login (POST /token)
-Log in with roszhan (admin) → Should return a JWT token
-
-Log in with john (user) → Should return a JWT token
+Log in with admin → Should return a JWT token
 
 Log in with invalid credentials → Should return 401 Unauthorized
 
@@ -227,8 +225,8 @@ This project is for educational use. You can extend it and build upon it for you
 
 Author
 
-Roszhan Raj Meenakshi Sundhresan Graduate Student in Computer Science California State University, Fullerton.
+Rahul Putta Graduate Student in Computer Science California State University, Fullerton.
 
-Jenny Phan UnderGrad Student in Computer Science California State University, Fullerton.
+Ibad Ur Rahman Mohammed UnderGrad Student in Computer Science California State University, Fullerton.
 
-Nayeem Sufyaan Abdul Graduate Student in Computer Science California State University, Fullerton.
+Sasidhar Jonnalagadda Graduate Student in Computer Science California State University, Fullerton.
