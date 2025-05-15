@@ -41,9 +41,7 @@ Use /token to log in and receive a JWT access token.
 
 Example Users
 
-Username: roszhan Password: secret123 Role: admin
-
-Username: john Password: user123 Role: user
+Username: admin Password: admin123 Role: admin
 
 Use the Authorize button in Swagger UI and enter:
 
