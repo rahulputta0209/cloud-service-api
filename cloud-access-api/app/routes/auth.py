@@ -10,8 +10,8 @@ token_auth_scheme = HTTPBearer(auto_error=False)
 
 # Static admin (optional, can be removed if full DB-backed)
 static_admin = {
-    "username": "roszhan",
-    "password": "secret123",
+    "username": "admin",
+    "password": "admin123",
     "role": "admin"
 }
 

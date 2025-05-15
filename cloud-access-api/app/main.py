@@ -6,35 +6,31 @@ from app.routes import (
     access_control,
     usage,
     auth,
-    cloud_apis
+    cloud_apis,
+    users
 )
 
-app = FastAPI(title="Roszhan-Jenny-Sufiyan's_Cloud Service Access Management System")
+# Create FastAPI instance
+app = FastAPI(
+    title="Rahul-Ibad-Sasidhar's Cloud Service Access Management System"
+)
 
-# Plan Management APIs
-app.include_router(plans.router, prefix="/plans", tags=["Plans"])
+# Register all routers with appropriate prefixes and tags
+routes_config = [
+    (plans.router, "/plans", ["Plans"]),
+    (permissions.router, "/permissions", ["Permissions"]),
+    (subscriptions.router, "/subscriptions", ["Subscriptions"]),
+    (access_control.router, "/access", ["Access Control"]),
+    (usage.router, "/usage", ["Usage Tracking"]),
+    (auth.router, "", ["Authentication"]),
+    (cloud_apis.router, "", ["Cloud Services"]),
+    (users.router, "/users", ["Users"])
+]
 
-# Permission Management APIs
-app.include_router(permissions.router, prefix="/permissions", tags=["Permissions"])
+for router, prefix, tags in routes_config:
+    app.include_router(router, prefix=prefix, tags=tags)
 
-# User Subscription APIs (JWT Protected)
-app.include_router(subscriptions.router, prefix="/subscriptions", tags=["Subscriptions"])
-
-# Access Control APIs (JWT Protected)
-app.include_router(access_control.router, prefix="/access", tags=["Access Control"])
-
-# Usage Tracking APIs (JWT Protected)
-app.include_router(usage.router, prefix="/usage", tags=["Usage Tracking"])
-
-# Auth APIs (Login / Token Generation)
-app.include_router(auth.router, tags=["Authentication"])
-
-# Dummy Cloud APIs (JWT + Access Control + Usage Tracking)
-app.include_router(cloud_apis.router, tags=["Cloud Services"])
-
-# ========== Default Route ==========
+# Root endpoint
 @app.get("/")
 async def root():
-    return {"message": "Roszhan-Jenny-Sufiyan's Cloud Service Access Management System"}
-from app.routes import users
-app.include_router(users.router, prefix="/users", tags=["Users"])
+    return {"message": "Rahul-Ibad-Sasidhar's Cloud Service Access Management System"}
