@@ -227,6 +227,6 @@ Author
 
 Rahul Putta Graduate Student in Computer Science California State University, Fullerton.
 
-Ibad Ur Rahman Mohammed UnderGrad Student in Computer Science California State University, Fullerton.
+Ibad Ur Rahman Mohammed Graduate Student in Computer Science California State University, Fullerton.
 
 Sasidhar Jonnalagadda Graduate Student in Computer Science California State University, Fullerton.
